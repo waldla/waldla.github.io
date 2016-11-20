@@ -1,0 +1,77 @@
+body{
+	background-color: rgb(250,250,250);	
+}
+.navbar{
+	font-family: 'Merriweather', serif;
+	font-size: 20px;
+	background-color: rgb(220,220,235);
+}
+
+.navbar-nav{
+	margin-left: 50px;
+}
+
+.navItem{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#globe{
+	margin-left: 20px;
+
+}
+
+.btn-lg{
+
+	background-color: rgb(200,200,210);
+	padding: 5px 10px 5px 10px;
+	margin-top: 7px;
+	border: none;
+}
+
+
+.btn-lg:hover { 
+	background-color: rgb(190,190,200);
+}
+
+.btn-lg:active { 
+	background-color: rgb(190,190,200) !important;
+}
+
+.modal-title{
+	margin-top: 20px;
+}
+
+h4{
+	font-family: 'Merriweather', serif;
+	font-size: 20px;
+}
+
+#intro{
+	font-family: 'Merriweather', serif;
+
+}
+
+
+#legend{
+margin-left: 20px;
+margin-top: 20px;
+}
+#bar2{
+
+	width: 200px;
+	height: 20px;
+	background: -webkit-linear-gradient(right, #5592AE,#0F1E26);
+}
+td{
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: bold;	
+}
+
+#description{
+margin-left: 30px;
+margin-bottom: 50px;
+font-weight: bold;
+
+}

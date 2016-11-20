@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Rock'n'Roll Map</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!--Google font-->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather">
+	<link rel="stylesheet" href="rockStyle.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+	<script type='text/javascript' src="rockData.js"></script>
+	<script type='text/javascript' src='rockScript.js'></script>
+
+</head>
+
+<body>
+
+	<div>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">The Roots of Rock'n'Roll</a>
+					<a type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">?</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li id="2040s" class="navItem" class="active"><a href="#">20-40s</a></li>
+					<li id="50s" class="navItem"><a href="#">50s</a></li>
+					<li id="60s" class="navItem"><a href="#">60s</a></li>
+					<li id="70s" class="navItem"><a href="#">70s</a></li>
+					<li id="80s" class="navItem"><a href="#">80s</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">What is this map about?</h4>
+					</div>
+
+					<div class="modal-body">
+						<p id="intro">The Rock'n'Roll map is a heatmap visualization showing the most popular geographic areas for Rock'n'Roll artists over seven decades. The visualization is based on a dataset of 200 most popular rock artists globally.</p>
+						<br>
+						<p><strong>This is how it works</strong></p>
+						
+						<img src="pict.png" width="550px">
+
+						<ol> <br>
+							<li>Bring your mouse on the colored areas to see more information on the area. If you're on the world view, zoom in by clicking the colored areas.</li>
+							<li>The info box shows the area name, popularity and artist highlights. The popularity value indicates how many artists out of all the artists on that zoom level are from the selected area.</li>
+							<li>Zoom out back to the world map view by clicking the globe icon.</li>
+							<li>Click the decades on the timeline to change the time period.</li>
+						</ol>								
+						
+					</div>
+					<div class="modal-footer">
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id='globe'>
+			<img src="globe.png" width="50px" height="50px">
+		</div>
+<div id='visualization'></div>
+
+<!--<div id="legend"><table>
+	<tr>
+		<td>Low</td>
+		<td id="bar2"></td>
+		<td>High</td>
+	</tr>
+
+</table></div>-->
+
+<div id="description"><p>% of the most popular rock artists</p></div>
+</div>
+
+</body>
+
+
+
+</html>
