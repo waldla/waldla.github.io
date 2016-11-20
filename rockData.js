@@ -651,8 +651,7 @@ var decades = [
 					{"name":"Ireland",
 						"count":1,
 						"examples":[
-							{"name":"U2"},
-							{"name":""}
+							{"name":"U2"}
 						]
 					}
 				]},

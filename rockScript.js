@@ -108,7 +108,16 @@ function loadData(){
               var percentage=(decades[decIndex].countries[1].provinces[i].count)/(decades[decIndex].countries[1].count)*100;
               var p = percentage.toFixed();
 
-              var artistName1=decades[decIndex].countries[1].provinces[i].examples[0].name;
+              if(decades[decIndex].countries[1].provinces[i].examples.length == 1) {
+                var artistName1 = decades[decIndex].countries[1].provinces[i].examples[0].name;
+                ukData.addRows([[{v:stateName,f:stateName + ', ' + p + '%'},percentage,createCustomHTMLContent2(artistName1)]]);
+              } else if (decades[decIndex].countries[1].provinces[i].examples.length == 2) {
+                var artistName1=decades[decIndex].countries[1].provinces[i].examples[0].name;
+                var artistName2=decades[decIndex].countries[1].provinces[i].examples[1].name;
+                ukData.addRows([[{v:stateName,f:stateName + ', ' + p + '%'},percentage,createCustomHTMLContent(artistName1, artistName2)]]);
+              }
+
+/*              var artistName1=decades[decIndex].countries[1].provinces[i].examples[0].name;
               var artistName2=decades[decIndex].countries[1].provinces[i].examples[1].name;
 
               if(decades[decIndex].countries[1].provinces[i].examples[1].name==""){
@@ -116,7 +125,7 @@ function loadData(){
               }
               else{
                 ukData.addRows([[{v:stateName,f:stateName + ', ' + p + '%'},percentage,createCustomHTMLContent(artistName1, artistName2)]]);    
-              }   
+              }  */ 
             }
           }
 
@@ -254,7 +263,7 @@ function createCustomHTMLContent(artist1, artist2) {
 }
 
 function createCustomHTMLContent2(artist1) {
-  return '<div style="margin-right:-10px; font-size:11px;">' + 'Artist Highlight' + '<br>' + '<ul>' + '<li>' + artist1 + '</li>';
+  return '<div style="margin-right:-10px; font-size:11px;">' + 'Artist Highlight' + '<br>' + '<ul>' + '<li>' + artist1 + '</li>' + '</ul>';
 }
 
 //---------------------------------------------------------------------------------------------------------
